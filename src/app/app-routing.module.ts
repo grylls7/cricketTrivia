@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
 import { HeroComponent } from './hero/hero.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-  { path: 'heroes', component: HeroComponent }
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', component: HeroComponent }
 ];
 
 @NgModule({
