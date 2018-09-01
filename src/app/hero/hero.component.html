@@ -1,3 +1,28 @@
-<p>
-  hero works!
-</p>
+<!-- <div *ngFor="let q of ques; let i = index">
+  {{i+1}}. {{q.question}}
+  <div *ngFor="let option of q.option">
+      {{option}}
+  </div>
+  <br>
+</div> -->
+<div class="container">
+  <div *ngFor="let q of ques; let i = index">
+    <br>
+    <div class="card">
+      <div class="card-header">
+          {{i+1}}. {{q.question}}
+      </div>
+      <div class="card-body">
+        <div class="form-group">
+          <div class="row">
+            <div class="col-sm-4">
+              <select class="form-control" id="exampleFormControlSelect1" style="border:1px solid red;">
+                <option *ngFor="let option of q.option">{{option}}</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
