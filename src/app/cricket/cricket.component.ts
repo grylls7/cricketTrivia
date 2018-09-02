@@ -4,11 +4,11 @@ import { QuesansService } from '../quesans.service';
 import { Chart } from 'chart.js';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
-  styleUrls: ['./hero.component.css']
+  selector: 'app-cricket',
+  templateUrl: './cricket.component.html',
+  styleUrls: ['./cricket.component.css']
 })
-export class HeroComponent implements OnInit {
+export class CricketComponent implements OnInit {
 
   ques : any;
   selected_answer:any =[];

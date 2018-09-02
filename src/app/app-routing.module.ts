@@ -2,11 +2,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
-import { HeroComponent } from './hero/hero.component';
+import { CricketComponent } from './cricket/cricket.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '', component: HeroComponent }
+  { path: '', component: CricketComponent }
 ];
 
 @NgModule({
