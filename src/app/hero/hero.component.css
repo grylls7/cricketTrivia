@@ -5,3 +5,19 @@
 .font-color{
     color:red;
 }
+
+.button-right-corner{
+    right: 15px;
+    position: fixed;
+}
+.header-bg-color{
+    background-color: black; 
+    color: white
+}
+.body-bg-color{
+    background-color: #f7f7f7;
+}
+@media only screen and (min-width: 992px) {.fixed_panel{position: fixed;top: 70px; right:0px;}}
+@media only screen and (min-width: 768px) {.fixed_panel{top: 70px; right:0px;}} 
+@media only screen and (min-width: 600px) {.fixed_panel{top: 70px; right:0px;}}
+

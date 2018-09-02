@@ -1,40 +1,46 @@
-<!-- <div *ngFor="let q of ques; let i = index">
-  {{i+1}}. {{q.question}}
-  <div *ngFor="let option of q.option">
-      {{option}}
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top "> 
+  <a class="navbar-brand text-center" href="#">Cricket Trivia</a>
+  <div class="button-right-corner">
+    <button type="button" class="btn btn-default" (click)="selectedOption($event,i)">Submit</button>
+    &nbsp;&nbsp;
+    <button type="button" class="btn btn-default" (click)="clear()">Clear</button>  
   </div>
-  <br>
-</div> -->
+</nav>
+
 <div class="container">
   <div class="row">
     <div class="col-sm-6">
-        <div *ngFor="let q of ques; let i = index">
-            <br>
-            <div class="card">
-              <div class="card-header">
-                  {{i+1}}. {{q.question}}
-              </div>
-              <div class="card-body">
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-sm-4">
-                      <select [className]="incorrect_recognise[i] == 2 ? 'incorrect-border form-control' : 'form-control'" 
-                              id="exampleFormControlSelect1" 
-                              (click)="onSelectOption($event,i)">
-                              
-                        <option selected disabled>Select</option>
-                        <option *ngFor="let option of q.option">{{option}}</option>
-                      </select>
-                    </div>
-                  </div>
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <label> <h1>Cricket Trivia</h1></label>
+        </div>
+      </div>
+      <div *ngFor="let q of ques; let i = index">
+        <br>
+        <div class="card">
+          <div class="card-header header-bg-color">
+            {{i+1}}. {{q.question}}
+          </div>
+          <div class="card-body body-bg-color">
+            <div class="form-group">
+              <div class="row">
+                <div class="col-sm-4">
+                  <select [className]="incorrect_recognise[i] == 2 ? 'incorrect-border form-control' : 'form-control'" 
+                          id="exampleFormControlSelect1" 
+                          (click)="onSelectOption($event,i)">
+                    <option selected disabled>Select</option>
+                    <option *ngFor="let option of q.option">{{option}}</option>
+                  </select>
                 </div>
-                <p *ngIf="incorrect_recognise[i] == -1" class="font-color">Please select the option</p>
               </div>
             </div>
+            <p *ngIf="incorrect_recognise[i] == -1" class="font-color">Please select the option</p>
           </div>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-6" style="position: fixed;top: 10px; right:0px;">
-        <button type="button" class="btn btn-default" (click)="selectedOption($event,i)">Default</button>
+    <div class="col-sm-6 fixed_panel">
+      <canvas id="myChart" width="400" height="400"></canvas>
     </div>  
   </div>
 </div>
